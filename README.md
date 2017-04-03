@@ -1,3 +1,9 @@
 # springboot-shell
 
-## Para Bash
+## Modo de usar
+
+### Bash
+```bash
+./bash/standalone.sh {start|stop|status|pid}
+```
+

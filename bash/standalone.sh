@@ -1,5 +1,5 @@
 #!/bin/bash
-# springboot-shell v1.0.0-SNAPSHOT
+# springboot-shell v1.0.0
 # Link: https://github.com/frndpovoa/springboot-shell
 # License: MIT
  
@@ -43,7 +43,7 @@ function parar_processo_num1() {
   local __ret=$1
   local __parado=1
 
-  printf "Parando #1: $2 ";
+  printf "Tentativa #1: $2 ";
   kill -TERM $2;
 
   for i in {1..120}; do
@@ -66,7 +66,7 @@ function parar_processo_num2() {
   local __ret=$1
   local __parado=1
 
-  printf "Parando #2: $2 ";
+  printf "Tentativa #2: $2 ";
   kill -SIGKILL $2;
 
   for i in {1..20}; do
@@ -142,7 +142,7 @@ case "$1" in
   ;;
 
   *)
-    echo "Modo de uso: $0 {start|stop|status}";
+    echo "Modo de uso: $0 {start|stop|status|pid}";
 
 esac
 
