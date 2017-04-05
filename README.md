@@ -24,11 +24,11 @@ sudo cp ./demo.service /etc/systemd/system/
 sudo chmod 664 /etc/systemd/system/demo.service
 sudo systemctl daemon-reload
 ```
-Para controlar o serviço:
+Para controlar o serviço manualmente:
 ```bash
 sudo systemctl {start|stop} demo
 ```
-Para registrar o serviço com a inicialização do Sistema Operacional:
+Para controlar o serviço com a inicialização do Sistema Operacional:
 ```bash
 sudo systemctl {enable|disable} demo
 ```
