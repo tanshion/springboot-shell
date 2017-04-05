@@ -20,7 +20,7 @@ standalone.sh {start|stop|status|pid}
 ### Systemd
 Para instalar o serviço:
 ```bash
-sudo cp ./demo.service /etc/systemd/system/demo.service
+sudo cp ./demo.service /etc/systemd/system/
 sudo chmod 664 /etc/systemd/system/demo.service
 sudo systemctl daemon-reload
 ```
@@ -30,6 +30,5 @@ sudo systemctl {start|stop} demo
 ```
 Para registrar o serviço com a inicialização do Sistema Operacional:
 ```bash
-sudo systemctl {start|stop} demo
 sudo systemctl {enable|disable} demo
 ```

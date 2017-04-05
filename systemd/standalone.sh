@@ -4,7 +4,7 @@
 # License: MIT
  
 DEBUG=true
-JAR="demo-1.0.0-SNAPSHOT.jar"
+JAR="/tmp/demo/demo-1.0.0-SNAPSHOT.jar"
 PID="demo.pid"
 JAVA_OPTS=" -Dspring.profiles.active=demo "
 
