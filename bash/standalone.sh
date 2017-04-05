@@ -1,12 +1,13 @@
 #!/bin/bash
-# springboot-shell v1.0.0-bash
+# springboot-shell v1.0.1-bash
 # Link: https://github.com/frndpovoa/springboot-shell
 # License: MIT
  
 DEBUG=true
-JAR="demo-1.0.0-SNAPSHOT.jar"
+DIR="."
+JAR="$DIR/demo-1.0.0-SNAPSHOT.jar"
 PID="demo.pid"
-JAVA_OPTS=" -Dspring.profiles.active=demo "
+JAVA_OPTS=" -Dspring.profiles.active=demo -Dspring.config.location=$DIR/ "
 
 
 function erro() { echo "[ERRO] $1"; }
