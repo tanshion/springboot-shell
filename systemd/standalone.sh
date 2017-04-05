@@ -1,5 +1,5 @@
 #!/bin/bash
-# springboot-shell v1.0.0-bash
+# springboot-shell v1.0.0-systemd
 # Link: https://github.com/frndpovoa/springboot-shell
 # License: MIT
  
@@ -87,32 +87,9 @@ function parar_processo_num2() {
 
 case "$1" in
 
-  pid)
-
-    if verif_se_arquivo_pid_existe; then
-      processo proc
-      info $proc
-    fi
-    
-  ;;
-
-  status)
-
-    if verif_se_arquivo_pid_existe; then
-      processo proc
-      if verif_se_processo_em_execucao $proc; then
-        info "Em execução!";
-      else
-        info "Parado!";
-      fi
-    fi
-
-  ;;
-
   start)
 
-    nohup java $JAVA_OPTS -jar $JAR &
-    tail -f nohup.out
+    java $JAVA_OPTS -jar $JAR &
 
   ;;
 
@@ -142,7 +119,7 @@ case "$1" in
   ;;
 
   *)
-    echo "Modo de uso: $0 {start|stop|status|pid}";
+    echo "Modo de uso: $0 {start|stop}";
 
 esac
 

@@ -15,7 +15,7 @@ public class Application {
 				.registerShutdownHook(true)//
 				.bannerMode(Banner.Mode.CONSOLE)//
 				.build();
-		application.addListeners(new ApplicationPidFileWriter("./demo.pid"));
+		application.addListeners(new ApplicationPidFileWriter("demo.pid"));
 		application.run(args);
 	}
 

@@ -1,0 +1,15 @@
+[Unit]
+Description=Demo service
+Documentation=https://github.com/frndpovoa/springboot-shell
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/tmp/demo/standalone.sh start
+ExecStop=/tmp/demo/standalone.sh stop
+PIDFile=demo.pid
+StandardOutput=null
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
