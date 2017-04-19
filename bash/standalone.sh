@@ -1,5 +1,5 @@
 #!/bin/bash
-# springboot-shell v1.0.1-bash
+# springboot-shell v1.0.2-bash
 # Link: https://github.com/frndpovoa/springboot-shell
 # License: MIT
  
@@ -113,6 +113,10 @@ case "$1" in
   start)
 
     nohup java $JAVA_OPTS -jar $JAR &
+    echo $! > "$PID"
+
+    sleep 1s
+
     tail -f nohup.out
 
   ;;
